@@ -97,6 +97,11 @@ branch: story-6
 - As a user, I can see a message stating that I lost the game by selecting the square that contains the bomb.
 - As a user, I cannot continue to play the game after I win or lose.
 - As a user, I can see a message informing me that I lost the game when I run out of turns (the counter reaches zero).
+branch: story-7
+-Solved the 4 above together
+-added an alert for winning under treasure, losing under bomb, and losing under too many clicks
+-added a timer to delay the win declaration by .3 seconds. (It was alerting before the alert popped up)
+-added a conditional statement to begin the handleClick function so that if game had ended or you ran out of clicks, you could not continue to click.
 
 ### 🏔 Stretch Goals
 
