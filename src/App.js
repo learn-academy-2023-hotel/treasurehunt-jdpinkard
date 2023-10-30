@@ -22,28 +22,44 @@ const App = () => {
   const [treasureLocation, setTresureLocation] = useState(Math.floor(Math.random() * board.length))
   const [bombLocation, setBombLocation] = useState(Math.floor(Math.random() * board.length))
   const [clickCounter, setClickCounter] = useState(5)
+  const [gameEnd, setGameEnd] = useState(false)
 
   const handleSquareClick = (clickSquareIndex) => {
-    let updatedBoard = [...board]
-    // set condion for if treasure location is same as clicked square's index show a treasure
-    if(clickSquareIndex === treasureLocation) {
-      // then reassign state value at that index to treasure emoji
-      updatedBoard[clickSquareIndex] = "👑"
-    }  else if (clickSquareIndex === bombLocation) {
-      // then reassign state value at that index to treasure emoji
-      updatedBoard[clickSquareIndex] = "💣"
-    } else {
-      setClickCounter(clickCounter - 1)
-      // use index to update the current square's value with emoji
-      updatedBoard[clickSquareIndex] = "🌴"
-      
-    }
-    setBoard(updatedBoard)
+    if(!clickCounter === 0 || gameEnd !== true){
+      let updatedBoard = [...board]
+      // set condion for if treasure location is same as clicked square's index show a treasure
+      if(clickSquareIndex === treasureLocation) {
+        // then reassign state value at that index to treasure emoji
+        updatedBoard[clickSquareIndex] = "👑"
+        setGameEnd(true)
+        setTimeout(function() {
+          alert("You found the treasure! You win!");
+        }, 300);
+      }  else if (clickSquareIndex === bombLocation) {
+        // then reassign state value at that index to treasure emoji
+        updatedBoard[clickSquareIndex] = "💣"
+        setGameEnd(true)
+        setTimeout(function() {
+          alert("You found the bomb! You lose!");
+        }, 300);
+      } else {
+        setClickCounter(clickCounter - 1)
+        // use index to update the current square's value with emoji
+        updatedBoard[clickSquareIndex] = "🌴"
+        if (clickCounter === 1) {
+          setTimeout(function() {
+            alert("Ran out of searches! You lose!");
+          }, 300);
+        }
+      }
+      setBoard(updatedBoard)
+   }
   }
 
   const restartButtonPressed = () => {
     setBoard(startingBoard)
     setClickCounter(5)
+    setGameEnd(false)
   }
 
   return (
