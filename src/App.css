@@ -6,4 +6,13 @@ h1 {
   height: 200px;
   width: 200px;
   border: 1px solid black;
+  font-size: 10rem;
+  text-align: center;
+}
+
+.board {
+  width: 610px;
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0 auto;
 }
