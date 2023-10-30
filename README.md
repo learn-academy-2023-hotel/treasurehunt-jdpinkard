@@ -77,6 +77,14 @@ branch: story-4
 -passed a random value in a another new state to determine the location of a bomb
 
 - As a user, I can click on a “Play Again” button that will restart the game.
+
+branch: story-5
+-created a new component <RestartButton />
+-made onClick to RestartButton<button>
+-added restartButtonPressed to App.js to trigger map back to original state
+-Split the original array useState so it has a variable to pull the state from which made a reset point for restartButtonPressed.
+-added formating to App.css to center the button
+
 - As a user, I can see a counter that shows how many guesses are remaining. The counter starts at five and decrements by one every time I click on a square that is neither the treasure nor the bomb.
 - As a user, I can see a message stating that I won the game by selecting the square that contains the treasure.
 - As a user, I can see a message stating that I lost the game by selecting the square that contains the bomb.

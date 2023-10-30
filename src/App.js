@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import "./App.css"
 import Square from "./components/Square"
+import RestartButton from "./components/RestartButton"
 
 const App = () => {
-  const [board, setBoard] = useState([
+  const startingBoard = [
     "?",
     "?",
     "?",
@@ -13,7 +14,9 @@ const App = () => {
     "?",
     "?",
     "?"
-  ])
+  ]
+
+  const [board, setBoard] = useState(startingBoard)
 
   const [treasureLocation, setTresureLocation] = useState(Math.floor(Math.random() * board.length))
   // console.log(treasureLocation)
@@ -34,6 +37,11 @@ const App = () => {
     }
     setBoard(updatedBoard)
   }
+
+  const restartButtonPressed = () => {
+    setBoard(startingBoard)
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -47,6 +55,9 @@ const App = () => {
           />
         })}
       </div>
+      <RestartButton 
+      restartButtonPressed={restartButtonPressed}
+      />
     </>
   )
 }
