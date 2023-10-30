@@ -86,6 +86,13 @@ branch: story-5
 -added formating to App.css to center the button
 
 - As a user, I can see a counter that shows how many guesses are remaining. The counter starts at five and decrements by one every time I click on a square that is neither the treasure nor the bomb.
+
+branch: story-6
+-created a new component <Counter />
+-created a new useState to contain the value of Counter starting at 5
+-added a statement subtract 1 from clickCounter and update setClickCounter state inside tree else statement
+-added a statement to setting clickCounter to 5 by updating setClickCounter state inside the reset function
+
 - As a user, I can see a message stating that I won the game by selecting the square that contains the treasure.
 - As a user, I can see a message stating that I lost the game by selecting the square that contains the bomb.
 - As a user, I cannot continue to play the game after I win or lose.
