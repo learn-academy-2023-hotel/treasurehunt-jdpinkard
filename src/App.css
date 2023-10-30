@@ -16,3 +16,8 @@ h1 {
   display: flex;
   margin: 0 auto;
 }
+
+.restartButton{
+  margin: 0 auto;
+  display: flex;
+}
