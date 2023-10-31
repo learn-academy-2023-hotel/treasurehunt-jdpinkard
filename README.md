@@ -108,7 +108,7 @@ branch: story-7
 
 - Consider how to handle a situation where the bomb and the treasure are at the same index.
 
-branch: story-10 
+branch: story-11
 -Bug tested: 
 -added a setTreasureLocation and a while loop to make sure treasureLocation and bombLocation are never the same (were added to the reset button. while loop also added to handleClick)
 -added a condition to the if statement in handleClick to prevent clicking the same block multiple times only to lower the click count
