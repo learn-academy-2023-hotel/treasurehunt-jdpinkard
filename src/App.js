@@ -20,6 +20,7 @@ const App = () => {
   const [treasureLocation, setTreasureLocation] = useState(Math.floor(Math.random() * board.length))
   const [clickCounter, setClickCounter] = useState(5)
   const [gameEnd, setGameEnd] = useState(false)
+
   let bombLocation = Math.floor(Math.random() * board.length)
 
   const handleSquareClick = (clickSquareIndex) => {
@@ -65,7 +66,6 @@ const App = () => {
     do {
       bombLocation = Math.floor(Math.random() * startingBoard.length);
     } while (bombLocation === treasureLocation);
-  
   }
 
   return (
