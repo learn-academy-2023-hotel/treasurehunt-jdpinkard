@@ -1,23 +1,57 @@
-h1, p {
+h1 {
   text-align: center;
+}
+
+body {
+  background-image: url(/Users/learnacademy/Desktop/treasurehunt-jdpinkard/src/pirates.jpg);
+  background-size: cover;
 }
 
 .square {
-  height: 200px;
-  width: 200px;
-  border: 1px solid black;
+  height: 190px;
+  width: 190px;
+  border: 5px dotted #bd8557;
+  font-family: 'Papyrus';
   font-size: 10rem;
+  font-weight: bolder;
+  color: #553526;
   text-align: center;
+  opacity: 1;
+  margin: 19px; 
 }
 
 .board {
-  width: 610px;
+  width: 720px;
+  height: 650px;
   flex-wrap: wrap;
   display: flex;
+  margin: 20px auto;
+}
+
+.outerBox {
+  background-image: url(/Users/learnacademy/Desktop/treasurehunt-jdpinkard/src/map3.png);
+  background-size: cover;
+  width: 850px;
+  height: 910px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+}
+
+.restartButton {
+  width: 200px;
+  height: 60px;
+  font-size: 2rem;
+  font-family: 'Papyrus';
+  font-weight: bolder;
   margin: 0 auto;
 }
 
-.restartButton{
+.counter {
+  width: 250px;
+  height: 60px;
+  font-size: 2rem;
+  font-family: 'Papyrus';
+  font-weight: bolder;
   margin: 0 auto;
-  display: flex;
 }
