@@ -37,7 +37,6 @@ const App = () => {
         // updates the clicked square with the treasure emoji
         updatedBoard[clickSquareIndex] = "💎"
         setGameEnd(true)
-        // boxHoverOff()
         setTimeout(function() {
           alert("You found the treasure! You win!");
         }, 300)
