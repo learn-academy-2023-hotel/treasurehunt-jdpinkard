@@ -16,11 +16,6 @@ p {
   text-shadow: 1px 1px rgb(176, 162, 141);
 }
 
-.icon { /* Bomb, Treasure, and Skull appearance in alert */
-  font-size: 6rem;
-  margin: 0;
-}
-
 /* General Styling */
 body {
   background-image: url(./images/sailing_ship.jpg);
@@ -29,10 +24,10 @@ body {
   display: flex;
   justify-content: center; 
   align-items: center; 
-  height: 100vh;           /* Full viewport height */
+  height: 100vh; /* Sets the body to the viewing height */
 }
 
-/* Flexbox Layout */
+/* Flexbox Layout : sets board and directions side by side */
 .float-parent-element, .float-child-element {
   display: flex;
   justify-content: center;
@@ -55,7 +50,7 @@ body {
   flex-wrap: wrap;
   margin-top: 70px;
   margin-left: 30px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 .board {
@@ -88,7 +83,7 @@ body {
 }
 
 /* Buttons and Counter */
-.restart-button, .custom-alert button {
+.restart-button, .custom-alert-contents button {
   width: 200px;
   height: 90px;
   font-size: 1.9rem;
@@ -128,7 +123,6 @@ body {
 }
 
 /* Custom Alert */
-/* See restart button for custom alert button settings */
 .custom-alert-container {
   position: fixed;
   top: 0;
@@ -137,27 +131,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* creates the shade background to focus in on alert */
   height: 100%;
-  z-index: 1000; /* Make sure the alert is on top of other elements */
+  z-index: 1000; /* Places alert on top of other elements */
 }
 
-.custom-alert button {
-  height: 55px;
-}
-
-.custom-alert {
-  padding: 16px;
-  border-radius: 4px;
-  margin: 16px;
-}
-
-.custom-alert-color {
-  color: #553526;
-  text-shadow: none;
-}
-
-.custom-alert.success {
+.custom-alert-contents {
   background-image: url(./images/map.png);
   background-size: contain;
   width: 359px;
@@ -165,6 +144,24 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+  padding: 16px;
+  border-radius: 4px;
+  margin: 16px;
+}
+
+.custom-alert-text {
+  color: #553526;
+  text-shadow: none;
+}
+
+.custom-alert-icon { /* Bomb, Treasure, and Skull appearance in alert */
+  font-size: 6rem;
+  margin: 0;
+}
+
+.custom-alert-contents button { 
+/* See restart button for the majority of custom alert button settings */
+  height: 55px;
 }
 
 /* Footer */

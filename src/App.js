@@ -32,7 +32,7 @@ const App = () => {
     } while (bombLocation === treasureLocation)
     // If the gameEnded or the place where you are clicking is not a "?", it will not allow you to click the board
     if(!gameEnd && board[clickSquareIndex] === "?"){
-      // updatedBoard stores/updates the board based on what you find
+      // updatedBoard stores/updates the board based on what you find : updates below when setting board 
       let updatedBoard = [...board]
       // set condition for if treasure location is same as clicked square's index : show a treasure
       if(clickSquareIndex === treasureLocation) {
@@ -40,7 +40,7 @@ const App = () => {
         updatedBoard[clickSquareIndex] = "💎"
         setGameEnd(true)
         setTimeout(function() {
-          showAlert("You found the treasure!", 'You Win!', '💎', 'success')
+          showAlert("You found the treasure!", 'You Win!', '💎')
         }, 300)
       // set condition for if bomb location is same as clicked square's index : show a bomb
       }  else if (clickSquareIndex === bombLocation) {
@@ -48,7 +48,7 @@ const App = () => {
         updatedBoard[clickSquareIndex] = "💣"
         setGameEnd(true)
         setTimeout(function() {
-          showAlert('You found the bomb!', 'You lose!', '💥', 'success')
+          showAlert('You found the bomb!', 'You lose!', '💣')
         }, 300)
       // set condition for if neither bomb or treasure location is same as clicked square's index : show a tree
       } else {
@@ -58,10 +58,11 @@ const App = () => {
         if (clickCounter === 1) {
           setGameEnd(true)
           setTimeout(function() {
-            showAlert('Stranded without supplies!', 'You lose!', '☠️', 'success')
+            showAlert('Stranded without supplies!', 'You lose!', '☠️')
           }, 300)
         }
       }
+      // updates board
       setBoard(updatedBoard)
    }
   }
@@ -78,8 +79,8 @@ const App = () => {
   }
 
   // Calling Alert Function
-  const showAlert = (message1, message2, message3, type) => {
-    setAlert({ message1, message2, message3, type })
+  const showAlert = (message1, message2, message3) => {
+    setAlert({ message1, message2, message3})
   }
 
   // Closing Alert Function
@@ -90,13 +91,12 @@ const App = () => {
 
   return (
     <>
-      <div className="App">
+      <div>
         {alert && (
           <CustomAlert
             message1={alert.message1}
             message2={alert.message2}
             message3={alert.message3}
-            type={alert.type}
             onClose={closeAlert}
           />
         )}
