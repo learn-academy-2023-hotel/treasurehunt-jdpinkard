@@ -16,11 +16,20 @@ p {
   text-shadow: 1px 1px rgb(176, 162, 141);
 }
 
+.icon { /* Bomb, Treasure, and Skull appearance in alert */
+  font-size: 6rem;
+  margin: 0;
+}
+
 /* General Styling */
 body {
   background-image: url(./images/sailing_ship.jpg);
   background-size: cover;
   filter: brightness(90%);
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;           /* Full viewport height */
 }
 
 /* Flexbox Layout */
@@ -79,7 +88,7 @@ body {
 }
 
 /* Buttons and Counter */
-.restart-button {
+.restart-button, .custom-alert button {
   width: 200px;
   height: 90px;
   font-size: 1.9rem;
@@ -116,6 +125,46 @@ body {
   font-family: 'Papyrus';
   font-weight: bolder;
   color: #553526;
+}
+
+/* Custom Alert */
+/* See restart button for custom alert button settings */
+.custom-alert-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  z-index: 1000; /* Make sure the alert is on top of other elements */
+}
+
+.custom-alert button {
+  height: 55px;
+}
+
+.custom-alert {
+  padding: 16px;
+  border-radius: 4px;
+  margin: 16px;
+}
+
+.custom-alert-color {
+  color: #553526;
+  text-shadow: none;
+}
+
+.custom-alert.success {
+  background-image: url(./images/map.png);
+  background-size: contain;
+  width: 359px;
+  height: 384px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Footer */
