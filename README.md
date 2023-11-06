@@ -117,7 +117,6 @@ branch: story-11
 -Bug tested: 
 -added a setTreasureLocation and a while loop to make sure treasureLocation and bombLocation are never the same (were added to the reset button. while loop also added to handleClick)
 -added a condition to the if statement in handleClick to prevent clicking the same block multiple times only to lower the click count
-
 -added a background, a background to the main board (a map), and adjusted the color scheme to be more fitting.
 
 ### 👩‍💻 Developer Stretch Goals
@@ -125,5 +124,13 @@ branch: story-11
 - As a developer, I have a well commented application.
 - As a developer, I have well written README file with instructions on how to access my repository.
 - As a developer, my variables are all named semantically.
+branch: Story-12 - 16
+-renamed a dozen or more classes to make them more readable and appear semantically
+-commented multiple areas to explain how it worked
 - As a developer, I have refactored and efficient code.
+branch: Refactoring
+-refactor if else statements to only if statements with guard clauses
+-relabled closeAlert from something that was misleading
 - As a developer, I have my application [deployed as a live website](https://render.com/docs/deploy-create-react-app).
+
+
