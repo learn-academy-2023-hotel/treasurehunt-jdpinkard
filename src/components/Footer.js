@@ -12,8 +12,8 @@ const Footer = () => {
                 </a></span>
             </p>
         </footer>
-
     </>
   )
 }
+
 export default Footer

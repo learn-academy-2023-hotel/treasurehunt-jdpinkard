@@ -16,4 +16,5 @@ const Square = ({ value, index, handleSquareClick, gameEnd }) => {
     </>
   )
 }
+
 export default Square
