@@ -1,4 +1,4 @@
-const CustomAlert = ({ message1, message2, message3, onClose }) => {
+const CustomAlert = ({ message1, message2, message3, closeAlert }) => {
 
   return (
     <div className="custom-alert-container">
@@ -10,7 +10,7 @@ const CustomAlert = ({ message1, message2, message3, onClose }) => {
         {/* icon for the alert message */}
         <p className="custom-alert-icon">{message3}</p>
         {/* close button for the alert message */}
-        <button onClick={onClose}>Try Again?</button>
+        <button onClick={closeAlert}>Try Again?</button>
       </div>
     </div>
   )
