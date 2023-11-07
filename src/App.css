@@ -21,8 +21,7 @@ body {
   background-image: url(./images/sailing_ship.jpg);
   background-size: cover;
   filter: brightness(90%);
-  display: flex;
-  justify-content: center; 
+  display: grid;
   align-items: center; 
   height: 100vh; /* Sets the body to the viewing height */
 }
@@ -167,4 +166,20 @@ body {
 /* Footer */
 footer {
   text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+
+  body {
+    background-size: 250vh;
+  }
+
+  .float-parent-element, .float-child-element {
+    display: grid;
+  }
+
+  .custom-alert-container {
+    height: 160%;
+    width: 100%;
+  } 
 }
