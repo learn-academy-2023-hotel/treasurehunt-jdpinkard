@@ -74,7 +74,7 @@ body {
   opacity: 1;
   margin: 12px;
   cursor: pointer; /* Change the cursor to a pointer on hover */
-  transition: color 0.3s;
+  transition: color 0.3s; /* transition timer for hover effect */
 }
 
 .square:hover{  
