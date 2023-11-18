@@ -4,9 +4,9 @@ import Square from "./components/Square"
 import Footer from "./components/Footer"
 import CustomAlert from "./components/CustomAlert"
 import chest from './images/chest100.png'
-import bomb from './images/bomb100.png'
+import bomb from './images/bomba100.png'
 import skull from './images/skull100.png'
-import tree from './images/tree100.png'
+import tree from './images/grass100.png'
 
 
 const App = () => {
