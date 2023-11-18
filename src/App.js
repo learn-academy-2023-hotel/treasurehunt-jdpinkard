@@ -139,8 +139,7 @@ const App = () => {
         <div>
           <div className="directions-box">
             <h1>Lost Treasure of Captain Pace</h1>
-            <p>Arr, let me spin ye a yarn of legend and mystery on the high seas! The tale be told that Captain Pace, a scallywag of the finest order, did bury his <u>precious treasure on one of nine remote islands</u>. But, ye see, he be no fool. He rigged a devilish trap with a <u>bomb on one of those isles</u>, just awaitin' to blow any greedy soul to the depths of 
-            <br/> Davy Jones' locker!</p>
+            <p>Arr, let me spin ye a yarn of legend and mystery on the high seas! The tale be told that Captain Pace, a scallywag of the finest order, did bury his <u>precious treasure on one of nine remote islands</u>. But, ye see, he be no fool. He rigged a devilish trap with a <u>bomb on one of those isles</u>, just awaitin' to blow any greedy soul to the depths of Davy Jones' locker!</p>
             <p>So, me hearties, beware and take heed! We've got but enough supplies to set <u>sail a mere five times</u> before we must turn our ship around and face the perils of the open sea once more.</p>
           </div>
         </div>
