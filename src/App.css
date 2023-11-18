@@ -1,7 +1,7 @@
 /* Typography */
 h1, p {
   text-align: center;
-  font-family: 'Papyrus';
+  font-family: 'Macondo';
   font-weight: bolder;
   color: #392319;
 }
@@ -12,7 +12,7 @@ h1 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-shadow: 1px 1px rgb(176, 162, 141);
 }
 
@@ -67,7 +67,7 @@ body {
   width: 122px;
   border: 3px dotted #bd8557;
   font-size: 6.5rem;
-  font-family: 'Papyrus';
+  font-family: 'Macondo';
   font-weight: bolder;
   color: #553526;
   text-align: center;
@@ -87,7 +87,7 @@ body {
   height: 90px;
   font-size: 1.9rem;
   color: #553526;
-  font-family: 'Papyrus';
+  font-family: 'Macondo';
   font-weight: bolder;
   margin: 0 auto;
   top: 50%;
@@ -107,7 +107,7 @@ body {
   width: 280px;
   height: 38px;
   font-size: 1.9rem;
-  font-family: 'Papyrus';
+  font-family: 'Macondo';
   font-weight: bolder;
   color: #553526;
   margin: 0 auto;
@@ -116,7 +116,7 @@ body {
 
 .click-counter-number {
   padding-left: 85px;
-  font-family: 'Papyrus';
+  font-family: 'Macondo';
   font-weight: bolder;
   color: #553526;
 }

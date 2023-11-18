@@ -3,6 +3,10 @@ import "./App.css"
 import Square from "./components/Square"
 import Footer from "./components/Footer"
 import CustomAlert from "./components/CustomAlert"
+import chest from './images/chest100.png'
+import bomb from './images/bomb100.png'
+import skull from './images/skull100.png'
+import tree from './images/tree100.png'
 
 
 const App = () => {
@@ -39,10 +43,10 @@ const App = () => {
     // set condition for if treasure location is same as clicked square's index : show a treasure
     if(clickSquareIndex === treasureLocation) {
       // updates the clicked square with the treasure emoji
-      updatedBoard[clickSquareIndex] = "💎"
+      updatedBoard[clickSquareIndex] = <img src={chest} alt="Chest" />
       setGameEnd(true)
       setTimeout(function() {
-        showAlert("You found the treasure!", 'You Win!', '💎')
+        showAlert("You found the treasure!", 'You Win!', <img src={chest} alt="Chest" />)
       }, 300)
       // updates board
       setBoard(updatedBoard)
@@ -51,10 +55,10 @@ const App = () => {
     // set condition for if bomb location is same as clicked square's index : show a bomb
     if (clickSquareIndex === bombLocation) {
       // updates the clicked square with the bomb emoji
-      updatedBoard[clickSquareIndex] = "💣"
+      updatedBoard[clickSquareIndex] = <img src={bomb} alt="Bomb" />
       setGameEnd(true)
       setTimeout(function() {
-        showAlert('You found the bomb!', 'You lose!', '💣')
+        showAlert('You found the bomb!', 'You lose!', <img src={bomb} alt="Bomb" />)
       }, 300)
       // updates board
       setBoard(updatedBoard)
@@ -64,10 +68,10 @@ const App = () => {
     if (clickCounter === 1) {
       setClickCounter(clickCounter - 1)
       // updates the clicked square with the tree emoji
-      updatedBoard[clickSquareIndex] = "🌴"
+      updatedBoard[clickSquareIndex] = <img src={tree} alt="Tree" />
       setGameEnd(true)
       setTimeout(function() {
-        showAlert('Stranded without supplies!', 'You lose!', '☠️')
+        showAlert('Stranded without supplies!', 'You lose!', <img src={skull} alt="Skull" />)
       }, 300)
       // updates board
       setBoard(updatedBoard)
@@ -75,7 +79,7 @@ const App = () => {
     }
     setClickCounter(clickCounter - 1)
     // updates the clicked square with the tree emoji
-    updatedBoard[clickSquareIndex] = "🌴"
+    updatedBoard[clickSquareIndex] = <img src={tree} alt="Tree" />
     // updates board
     setBoard(updatedBoard)
   }
@@ -135,7 +139,8 @@ const App = () => {
         <div>
           <div className="directions-box">
             <h1>Lost Treasure of Captain Pace</h1>
-            <p>Arr, let me spin ye a yarn of legend and mystery on the high seas! The tale be told that Captain Pace, a scallywag of the finest order, did bury his <u>precious treasure on one of nine remote islands</u>. But, ye see, he be no fool. He rigged a devilish trap with a <u>bomb on one of those isles</u>, just awaitin' to blow any greedy soul to the depths of Davy Jones' locker!</p>
+            <p>Arr, let me spin ye a yarn of legend and mystery on the high seas! The tale be told that Captain Pace, a scallywag of the finest order, did bury his <u>precious treasure on one of nine remote islands</u>. But, ye see, he be no fool. He rigged a devilish trap with a <u>bomb on one of those isles</u>, just awaitin' to blow any greedy soul to the depths of 
+            <br/> Davy Jones' locker!</p>
             <p>So, me hearties, beware and take heed! We've got but enough supplies to set <u>sail a mere five times</u> before we must turn our ship around and face the perils of the open sea once more.</p>
           </div>
         </div>
