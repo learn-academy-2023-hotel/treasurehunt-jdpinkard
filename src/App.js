@@ -4,9 +4,9 @@ import Square from "./components/Square"
 import Footer from "./components/Footer"
 import CustomAlert from "./components/CustomAlert"
 import chest from './images/chest100.png'
-import bomb from './images/bomba100.png'
+import bomb from './images/bomb100.png'
 import skull from './images/skull100.png'
-import tree from './images/grass100.png'
+import tree from './images/palm100.png'
 
 
 const App = () => {
@@ -43,10 +43,10 @@ const App = () => {
     // set condition for if treasure location is same as clicked square's index : show a treasure
     if(clickSquareIndex === treasureLocation) {
       // updates the clicked square with the treasure emoji
-      updatedBoard[clickSquareIndex] = <img src={chest} alt="Chest" />
+      updatedBoard[clickSquareIndex] = <img src={chest} alt="Chest" width={120}/>
       setGameEnd(true)
       setTimeout(function() {
-        showAlert("You found the treasure!", 'You Win!', <img src={chest} alt="Chest" />)
+        showAlert("You found the treasure!", 'You Win!', <img src={chest} alt="Chest" width={120}/>)
       }, 300)
       // updates board
       setBoard(updatedBoard)
@@ -55,10 +55,10 @@ const App = () => {
     // set condition for if bomb location is same as clicked square's index : show a bomb
     if (clickSquareIndex === bombLocation) {
       // updates the clicked square with the bomb emoji
-      updatedBoard[clickSquareIndex] = <img src={bomb} alt="Bomb" />
+      updatedBoard[clickSquareIndex] = <img src={bomb} alt="Bomb" width={120}/>
       setGameEnd(true)
       setTimeout(function() {
-        showAlert('You found the bomb!', 'You lose!', <img src={bomb} alt="Bomb" />)
+        showAlert('You found the bomb!', 'You lose!', <img src={bomb} alt="Bomb" width={120}/>)
       }, 300)
       // updates board
       setBoard(updatedBoard)
@@ -68,10 +68,10 @@ const App = () => {
     if (clickCounter === 1) {
       setClickCounter(clickCounter - 1)
       // updates the clicked square with the tree emoji
-      updatedBoard[clickSquareIndex] = <img src={tree} alt="Tree" />
+      updatedBoard[clickSquareIndex] = <img src={tree} alt="Tree" width={120}/>
       setGameEnd(true)
       setTimeout(function() {
-        showAlert('Stranded without supplies!', 'You lose!', <img src={skull} alt="Skull" />)
+        showAlert('Stranded without supplies!', 'You lose!', <img src={skull} alt="Skull" width={120}/>)
       }, 300)
       // updates board
       setBoard(updatedBoard)
@@ -79,7 +79,7 @@ const App = () => {
     }
     setClickCounter(clickCounter - 1)
     // updates the clicked square with the tree emoji
-    updatedBoard[clickSquareIndex] = <img src={tree} alt="Tree" />
+    updatedBoard[clickSquareIndex] = <img src={tree} alt="Tree" width={120}/>
     // updates board
     setBoard(updatedBoard)
   }
